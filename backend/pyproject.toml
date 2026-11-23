@@ -1,0 +1,14 @@
+[tool.ruff]
+line-length = 260
+extend-exclude = ["alembic"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008", "E701", "E702"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+"app/services/gaps.py" = ["E501"]
+"app/services/drafts.py" = ["E501"]  # long user-facing advice strings
